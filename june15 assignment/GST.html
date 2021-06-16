@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+    <form name=”form1” method=”post” > 
+        <input type=”hidden” name=”mode” value=”PinRequest” /> 
+        <label class=”green”><b>Choose price</b></label> 
+        <select name=”requested” onchange=”calculateAmount(this.value)” required> 
+  <option value=”” disabled selected>Choose your option</option> 
+  <option value=”1000”>1000</option> 
+  <option value=”2000”>2000</option> 
+  <option value=”3000”>3000</option> 
+  <option value=”4000”>4000</option> 
+  <option value=”5000”>5000</option> 
+</select> 
+        <label><b>Total Amount after tax</b></label> 
+        <input class=”border” name=”tot_amount” id=”tot_amount” type=”text”> 
+        <script> 
+            Function calculateAmount(val) { 
+                Var price = val * 1; 
+                //display the result 
+                Var tot_price = price + (price * 0.18); 
+ 
+                Var divobj = document.getElementById(‘tot_amount’); 
+                Divobj.value = tot_price; 
+            } 
+        </script> 
+        <body> 
+</html> 
+ 
